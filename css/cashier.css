@@ -1,0 +1,114 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+height:100%;
+min-height: 100%;
+margin: 0;
+width: auto;
+font-weight:normal;
+text-shadow: none;
+padding-bottom:70px;
+background:black;
+background-color:black;
+color:white;
+}
+
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 24%;
+  padding: 0 10px;
+  margin: .5%;
+}
+
+/* Remove extra left and right margins, due to padding in columns */
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+  text-align: center;
+  background-color: #f1f1f1;
+}
+.header, .footer {
+  background-color: teal;
+  min-height: 28px;
+}
+
+.container {
+  background-color: darkgray;
+  height: 80%;
+  padding: 16px;
+}
+
+.closebtn{ margin-top: 0; color: #aaa; float: right; font-size: 28px; font-weight: bold;}
+
+/* Responsive columns - one column layout (vertical) on small screens */
+@media screen and (
+max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}            
+    
+
+#header {
+position: fixed;
+top: 0px;
+left: 0px;
+right: 0px;
+height:100px;
+color:#ddd;
+text-align:center;
+padding-top:5px;
+font-size:medium;
+background-image:linear-gradient(180deg, #000,#444444,#000);
+z-index:1000;
+}  
+
+#sousheader{
+height:100px;
+position:relative;
+background: #222;
+}      
+html{
+height: 100%;
+font-family: Jura, Calibri, Verdana, Arial, sans-serif;
+text-shadow: none;
+font-weight:normal;
+}
+h1{font-family: Jura, Calibri, Verdana, Arial, sans-serif;
+}  
+#myUL {
+  /* Remove default list styling */
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL li a {
+  border: 1px solid #ddd; /* Add a border to all links */
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6; /* Grey background color */
+  padding: 12px; /* Add some padding */
+  text-decoration: none; /* Remove default text underline */
+  font-size: 18px; /* Increase the font-size */
+  color: black; /* Add a black text color */
+  display: block; /* Make it into a block element to fill the whole list */
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee; /* Add a hover effect to all links, except for headers */
+}
+
